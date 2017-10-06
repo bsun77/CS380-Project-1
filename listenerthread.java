@@ -15,13 +15,13 @@ public class listenerthread implements Runnable {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		try{
+		try {
 			InputStream is = socket.getInputStream();
 			InputStreamReader isr = new InputStreamReader(is, "UTF-8");
 			BufferedReader br = new BufferedReader(isr);
+			
 			while(true){
-				System.out.println(br.readLine());
-				//Thread.sleep(1000);
+					System.out.println(br.readLine());
 			}
 		} catch (Exception e) {
 			System.out.println("Error.");

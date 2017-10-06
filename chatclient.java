@@ -21,15 +21,17 @@ public class chatclient {
 				Thread t = new Thread(new listenerthread(socket));
 				t.start();
 
-				String a;
+				String a = "";
+
 				do{
 					a = s.nextLine();
-					out.println(a);
+					if(!a.equalsIgnoreCase("exit")){
+						out.println(a);
+					}
 				}
 				while(!a.equals("exit"));
 				System.exit(0);
 			}
 		}
 	}
-
 }
